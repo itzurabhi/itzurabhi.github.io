@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Restaurant Billing & KOT</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style5.css">
+</head>
+
+<body>
+
+
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>WoodSpoon</h3>
+                <h4>Kakkanad</h4>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>Restaurant Operations</p>
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Billing</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li><a href="#">Take Away Order</a></li>
+                        <li><a href="#">Table Order</a></li>
+                        <li><a href="#">Refund</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#stockSubmenu" data-toggle="collapse" aria-expanded="false">Stock</a>
+                    <ul class="collapse list-unstyled" id="stockSubmenu">
+                        <li><a href="#">View</a></li>
+                        <li><a href="#">Add</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#reportsSubmenu" data-toggle="collapse" aria-expanded="false">Reports</a>
+                    <ul class="collapse list-unstyled" id="reportsSubmenu">
+                        <li><a href="#">Total Sales</a></li>
+                        <li><a href="#">Item Sales</a></li>
+                        <li><a href="#">Kitchen Orders</a></li>
+                        <li><a href="#">Table Orders</a></li>
+                        <li><a href="#">Waiter Orders</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Settings</a>
+                </li>
+
+            </ul>
+
+            <!-- <ul class="list-unstyled CTAs">
+                <li><a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a></li>
+                <li><a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a></li>
+            </ul> -->
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+
+                    <div class="navbar-header">
+                        <button type="button" id="sidebarCollapse" class="navbar-btn">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Page</a></li>
+                            <li><a href="#">Page</a></li>
+                            <li><a href="#">Page</a></li>
+                            <li><a href="#">Page</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <h2>Processing Orders</h2>
+
+
+
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Waiter</th>
+                        <th>Order Type</th>
+                        <th>Stared On</th>
+                        <th>Head Count</th>
+                        <th>Floor</th>
+                        <th>Section</th>
+                        <th>Table</th>
+                        <th>Last Kitchen Update</th>
+                        <th>View Details</th>
+                        <th>Edit Order</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Aravind</td>
+                        <td>Table Order</td>
+                        <td>09:00</td>
+                        <td>1</td>
+                        <td>Ground</td>
+                        <td>AC Dining</td>
+                        <td>L1</td>
+                        <td>None</td>
+                        <td><button class="btn btn-info">View</button></td>
+                        <td><button class="btn btn-danger">Edit</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>John</td>
+                        <td>Table Order</td>
+                        <td>09:05</td>
+                        <td>3</td>
+                        <td>Ground</td>
+                        <td>Non AC Dining</td>
+                        <td>L3</td>
+                        <td>09:10</td>
+                        <td><button class="btn btn-info">View</button></td>
+                        <td><button class="btn btn-danger">Edit</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Riyas</td>
+                        <td>Table Order</td>
+                        <td>09:08</td>
+                        <td>4</td>
+                        <td>Ground</td>
+                        <td>Non AC Dining</td>
+                        <td>L1</td>
+                        <td>09:15</td>
+                        <td><button class="btn btn-info">View</button></td>
+                        <td><button class="btn btn-danger">Edit</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap Js CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#sidebarCollapse').on('click', function() {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
