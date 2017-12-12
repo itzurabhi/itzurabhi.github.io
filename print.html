@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title style="padding: 0; margin: 0;">eKairali</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="print.js"></script>
     <style>
@@ -14,10 +15,10 @@
             margin: 0px;
             padding: 0;
             border: 0;
-            /* background-color: yellow; */
+            background-color: yellow;
         }
         
-        .TotalPrintArea {
+        */ .TotalPrintArea {
             padding: 0px;
             margin: 0px;
             background-color: red;
@@ -28,8 +29,8 @@
             background-color: green;
             margin: 0;
             padding: 0;
-            width: 9.24in;
-            height: 12.1in;
+            /* width: 8.3in; */
+            /* height: 11.1in; */
         }
         
         .PageBreak {
@@ -45,11 +46,11 @@
         }
         
         @page {
-            width: 9.24in;
-            height: 12.1in;
+            /* width: 8.3in; */
+            /* height: 11.1in; */
             /* margin-top: 1.30in; */
             /* margin-bottom: 0in; */
-            margin: 0in;
+            /* margin: 0in; */
         }
         
         .ItemList {
@@ -58,7 +59,7 @@
         }
         
         .ItemRow {
-            position: absolute;
+            /* position: absolute; */
         }
     </style>
 </head>
@@ -97,8 +98,8 @@
     </div> -->
     <div class="TotalPrintArea" ng-app="Printer" ng-controller="PrintController">
 
-        <div class="SinglePage" ng-repeat="page in Pages track by $index">
-            <div class="PageTitle">School {{index}}</div>
+        <div class="A4" ng-repeat="page in Pages track by $index">
+            <h2>School {{index}}</h2>
             <ul class="ItemList">
                 <li class=" SingleRow " ng-repeat="singleRow in PageItems track by $index ">Row {{index}}</li>
             </ul>
