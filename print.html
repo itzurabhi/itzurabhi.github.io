@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title style="padding: 0; margin: 0;">eKairali</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="print.js"></script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0;
+            border: 0;
+            background-color: yellow;
+        }
+        
+        .TotalPrintArea {
+            padding: 0px;
+            margin: 0px;
+            background-color: red;
+            position: absolute;
+        }
+        
+        .SinglePage {
+            background-color: green;
+            margin: 0;
+            padding: 0;
+            width: 08.30in;
+            height: 11.1in;
+            padding-top: 1.30in;
+            padding-bottom: 0in;
+        }
+        
+        .PageBreak {
+            display: block;
+            page-break-after: always;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .PageTitle {}
+    </style>
+</head>
+
+<body>
+    <div class="TotalPrintArea" ng-app="Printer" ng-controller="PrintController">
+
+        <div class="SinglePage" ng-repeat="page in Pages track by $index">
+            This is page {{$index + 1}}
+            <div class="PageBreak"></div>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>
