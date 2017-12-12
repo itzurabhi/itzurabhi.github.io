@@ -41,7 +41,13 @@
             padding: 0;
         }
         
-        .PageTitle {}
+        .PageTitle {
+            margin-left: 20px;
+        }
+        
+        .ItemList {}
+        
+        .ItemRow {}
     </style>
 </head>
 
@@ -49,7 +55,11 @@
     <div class="TotalPrintArea" ng-app="Printer" ng-controller="PrintController">
 
         <div class="SinglePage" ng-repeat="page in Pages track by $index">
-            This is page {{$index + 1}}
+            <div class="PageTitle">School {{index}}</div>
+            <ul>
+                <li ng-repeat="singleRow in PageItems track by $index">Row {{index}}</li>
+            </ul>
+
             <div class="PageBreak"></div>
         </div>
 
