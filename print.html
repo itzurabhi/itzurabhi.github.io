@@ -30,8 +30,8 @@
             padding: 0;
             width: 08.30in;
             height: 11.1in;
-            padding-top: 1.30in;
-            padding-bottom: 0in;
+            /* padding-top: 1.30in; */
+            /* padding-bottom: 0in; */
         }
         
         .PageBreak {
@@ -42,16 +42,22 @@
         }
         
         .PageTitle {
-            margin-left: 20px;
+            margin-left: 6cm;
+            margin-top: 4.2cm;
         }
         
         @page {
             margin: 0;
         }
         
-        .ItemList {}
+        .ItemList {
+            padding-left: 6cm;
+            margin-top: 3.5cm;
+        }
         
-        .ItemRow {}
+        .ItemRow {
+            position: absolute;
+        }
     </style>
 </head>
 
@@ -60,17 +66,17 @@
 
         <div class="SinglePage" ng-repeat="page in Pages track by $index">
             <div class="PageTitle">School {{index}}</div>
-            <ul>
-                <li ng-repeat="singleRow in PageItems track by $index">Row {{index}}</li>
+            <ul class="ItemList">
+                <li class=" SingleRow " ng-repeat="singleRow in PageItems track by $index ">Row {{index}}</li>
             </ul>
 
-            <div class="PageBreak"></div>
+            <div class="PageBreak "></div>
         </div>
 
     </div>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" crossorigin="anonymous"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js " crossorigin="anonymous "></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css " rel="stylesheet " integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u " crossorigin="anonymous ">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
 </body>
 
 </html>
