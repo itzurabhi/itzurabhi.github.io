@@ -46,11 +46,7 @@
         }
         
         @page {
-            /* width: 8.3in; */
-            /* height: 11.1in; */
-            /* margin-top: 1.30in; */
-            /* margin-bottom: 0in; */
-            /* margin: 0in; */
+            size: A4
         }
         
         .ItemList {
@@ -98,13 +94,13 @@
     </div> -->
     <div class="TotalPrintArea" ng-app="Printer" ng-controller="PrintController">
 
-        <div class="A4" ng-repeat="page in Pages track by $index">
+        <div class="sheet" ng-repeat="page in Pages track by $index">
             <h2>School {{index}}</h2>
             <ul class="ItemList">
                 <li class="SingleRow" ng-repeat="singleRow in PageItems track by $index ">Row {{index}}</li>
             </ul>
 
-            <div class="PageBreak "></div>
+            <div class="PageBreak"></div>
         </div>
 
     </div>
