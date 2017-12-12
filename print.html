@@ -14,7 +14,7 @@
             margin: 0px;
             padding: 0;
             border: 0;
-            background-color: yellow;
+            /* background-color: yellow; */
         }
         
         .TotalPrintArea {
@@ -28,10 +28,6 @@
             background-color: green;
             margin: 0;
             padding: 0;
-            width: 08.30in;
-            height: 11.1in;
-            /* padding-top: 1.30in; */
-            /* padding-bottom: 0in; */
         }
         
         .PageBreak {
@@ -42,16 +38,20 @@
         }
         
         .PageTitle {
-            margin-left: 6cm;
+            padding-left: 3.5cm;
             margin-top: 4.2cm;
         }
         
         @page {
+            width: 9.24in;
+            height: 12.1in;
+            /* margin-top: 1.30in; */
+            /* margin-bottom: 0in; */
             margin: 0;
         }
         
         .ItemList {
-            padding-left: 6cm;
+            padding-left: 3.5cm;
             margin-top: 3.5cm;
         }
         
@@ -62,6 +62,37 @@
 </head>
 
 <body>
+
+    <!-- <div class="container">
+        <h2>Bordered Table</h2>
+        <p>The .table-bordered class adds borders to a table:</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="col col-lg-1">Order Number</th>
+                    <th class="col col-lg-6">Lastname</th>
+                    <th class="col col-lg-1">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>john@example.com</td>
+                </tr>
+                <tr>
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>mary@example.com</td>
+                </tr>
+                <tr>
+                    <td>July</td>
+                    <td>Dooley</td>
+                    <td>july@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
     <div class="TotalPrintArea" ng-app="Printer" ng-controller="PrintController">
 
         <div class="SinglePage" ng-repeat="page in Pages track by $index">
