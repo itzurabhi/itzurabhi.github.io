@@ -7,55 +7,75 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title style="padding: 0; margin: 0;">eKairali</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.min.css" /> -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="print.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js " crossorigin="anonymous "></script>
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css " rel="stylesheet " integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u " crossorigin="anonymous "> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script> -->
+
     <style>
-        * {
-            margin: 0px;
-            padding: 0;
-            border: 0;
-            background-color: yellow;
-        }
-        
-        */ .TotalPrintArea {
-            padding: 0px;
-            margin: 0px;
-            background-color: red;
-            position: absolute;
-        }
-        
-        .SinglePage {
-            background-color: green;
-            margin: 0;
-            padding: 0;
-            /* width: 8.3in; */
-            /* height: 11.1in; */
-        }
-        
-        .PageBreak {
-            display: block;
-            page-break-after: always;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .PageTitle {
-            padding-left: 3.5cm;
-            margin-top: 4.2cm;
-        }
-        
-        @page {
-            size: A4
+        @media print {
+            * {
+                margin: 0;
+                padding: 0;
+                border: 0;
+            }
+            .TotalPrintArea {
+                padding: 0;
+                margin: 0;
+                display: block;
+            }
+            .SinglePage {
+                /* border-style: solid; */
+                /* border-width: 1px; */
+                /* border-color: orange; */
+                /* background-color: green; */
+                margin: 0;
+                padding: 0;
+                /* border: 1px solid; */
+                /* width: 8.3in; */
+                /* height: 11.1in; */
+            }
+            .PageBreak {
+                display: block;
+                page-break-after: always;
+                margin: 0;
+                padding: 0;
+            }
+            .PageTitle {
+                padding-left: 0cm;
+                margin-top: 0cm;
+            }
+            @page {
+                size: 8.3in 11.1in;
+                margin: 1in;
+            }
+            body {
+                /* border: 1px solid; */
+                background-color: yellow;
+            }
+            header {
+                display: none;
+                margin: 0;
+                padding: 0;
+            }
+            footer {
+                display: none;
+                margin: 0;
+                padding: 0;
+            }
+            .PageBreak {
+                display: block;
+                page-break-after: always;
+                margin: 0;
+                padding: 0;
+            }
         }
         
         .ItemList {
-            padding-left: 3.5cm;
+            padding-left: 0cm;
             margin-top: 3.5cm;
-        }
-        
-        .ItemRow {
-            /* position: absolute; */
         }
     </style>
 </head>
@@ -94,8 +114,8 @@
     </div> -->
     <div class="TotalPrintArea" ng-app="Printer" ng-controller="PrintController">
 
-        <div class="sheet" ng-repeat="page in Pages track by $index">
-            <h2>School {{index}}</h2>
+        <div class="SinglePage" ng-repeat="page in Pages track by $index">
+            <h2 class="PageTitle">School {{index}}</h2>
             <ul class="ItemList">
                 <li class="SingleRow" ng-repeat="singleRow in PageItems track by $index ">Row {{index}}</li>
             </ul>
@@ -104,9 +124,6 @@
         </div>
 
     </div>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js " crossorigin="anonymous "></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css " rel="stylesheet " integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u " crossorigin="anonymous ">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
 </body>
 
 </html>
